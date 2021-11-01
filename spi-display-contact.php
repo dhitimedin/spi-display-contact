@@ -288,19 +288,4 @@ class Contact_Request_Display extends WP_List_Table {
         $this->orderby = esc_sql($orderby);
     }
 
-    /**
-     * Disables the views for 'side' context as there's not enough free space in the UI
-     * Only displays them on screen/browser refresh. Else we'd have to do this via an AJAX DB update.
-     *
-     * @see WP_List_Table::extra_tablenav()
-     */
-   /* public function extra_tablenav($which)
-    {
-        global $wp_meta_boxes;
-        $views = $this->get_views();
-        if (empty($views)) return;
-
-        $this->views();
-    }*/
-
 }
